@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
 
   final List<TrackerItem> items = [
-    TrackerItem("Lihat Manhwa", Icons.library_books_rounded),
-    TrackerItem("Tambah Manhwa", Icons.library_add_rounded),
-    TrackerItem("Logout", Icons.logout),
+    TrackerItem("Lihat Manhwa", Icons.library_books_rounded, Colors.brown),
+    TrackerItem("Tambah Manhwa", Icons.library_add_rounded, Colors.cyan),
+    TrackerItem("Logout", Icons.logout, Colors.red),
   ];
 
   @override
@@ -61,8 +62,9 @@ class MyHomePage extends StatelessWidget {
 class TrackerItem {
     final String name;
     final IconData icon;
+    final Color color;
 
-    TrackerItem(this.name, this.icon);
+    TrackerItem(this.name, this.icon, this.color);
 }
 
 class TrackerCard extends StatelessWidget {
@@ -73,7 +75,7 @@ class TrackerCard extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
     return Material(
-        color: Colors.indigo,
+        color: item.color,
         child: InkWell(
         // Area responsive terhadap sentuhan
         onTap: () {
