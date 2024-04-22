@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:manhwa_tracker/menu.dart';
+import 'package:manhwa_tracker/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
