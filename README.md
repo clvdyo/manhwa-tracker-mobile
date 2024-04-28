@@ -101,3 +101,95 @@ Jadi, intinya, perbedaan utama antara StatelessWidget dan StatefulWidget adalah 
     SnackBar: Menampilkan pesan kecil yang muncul di bagian bawah layar. Digunakan di dalam onTap event untuk memberikan umpan balik kepada pengguna setelah mereka menekan sebuah item tracker.
 
 </details>
+
+## Tugas 8
+
+<details>
+    
+[ ] Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru dengan ketentuan sebagai berikut:
+
+    [ ] Memakai minimal tiga elemen input, yaitu name, amount, description. Tambahkan elemen input sesuai dengan model pada aplikasi tugas Django yang telah kamu buat.
+    
+    [ ] Memiliki sebuah tombol Save.
+    
+    [ ] Setiap elemen input di formulir juga harus divalidasi dengan ketentuan sebagai berikut:
+    
+    [ ] Setiap elemen input tidak boleh kosong.
+    
+    [ ] Setiap elemen input harus berisi data dengan tipe data atribut modelnya.
+
+[ ] Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
+
+[ ] Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru.
+
+[ ] Membuat sebuah drawer pada aplikasi dengan ketentuan sebagai berikut:
+    
+    [ ] Drawer minimal memiliki dua buah opsi, yaitu Halaman Utama dan Tambah Item.
+
+    [ ] Ketika memiih opsi Halaman Utama, maka aplikasi akan mengarahkan pengguna ke halaman utama.
+    
+    [ ] Ketika memiih opsi Tambah Item, maka aplikasi akan mengarahkan pengguna ke halaman form tambah item baru.
+
+[ ] Menjawab beberapa pertanyaan berikut pada README.md pada root folder (silakan modifikasi README.md yang telah kamu buat sebelumnya; tambahkan subjudul untuk setiap tugas).
+
+[ ] Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+
+Pada `Navigator.pushReplacement` akan me-replace halaman sekarang dengan halaman baru sedangkan pada `Navigator.push` menambahkan rute lain ke atas tumpukan screen (stack) yang sekarang<br>
+
+[ ] Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+[ ] Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+
+[ ] Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+[ ] Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+
+</details>
+
+## Tugas 9
+
+<details>
+
+[ ] Memastikan deployment ke PWS proyek tugas Django kamu telah berjalan dengan baik.
+
+[ ] Membuat halaman login pada proyek tugas Flutter.
+
+[ ] Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
+
+[ ] Membuat model kustom sesuai dengan proyek aplikasi Django.
+
+[ ] Membuat halaman yang berisi daftar semua item yang terdapat pada ** JSON diendpoint Django yang telah kamu deploy.
+
+[ ] Tampilkan name, amount, dan description dari masing-masing item pada halaman ini.
+
+[ ] Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
+
+[ ] Halaman ini dapat diakses dengan menekan salah satu item pada halaman daftar Item.
+
+[ ] Tampilkan seluruh atribut pada model item kamu pada halaman ini.
+
+[ ] Tambahkan tombol untuk kembali ke halaman daftar item.
+
+[ ] Menjawab beberapa pertanyaan berikut pada README.md pada root folder (silakan modifikasi README.md yang telah kamu buat sebelumnya; tambahkan subjudul untuk setiap tugas).
+
+[ ] Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Ya bisa, hanya saja data yang didapat bisa jadi strukturnya tidak sesuai dengan apa yang diinginkan. Oleh karena itu, sebaiknya menentukan model terlebih dahulu agar data yang didapat mempunyai struktur yang baik dan mudah untuk digunakan
+
+[ ] Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+
+[ ] Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+1. Menambahkan depedensi `http`
+2. Membuat model sesuai json yang akan di get
+3. Melakukan HTTP request dengan method `GET`
+4. Response didecode menjadi JSON kemudian dikonversi menjadi model yang dibuat
+5. Menampilkan data dengan memanfaatkan `FutureBuilder`
+
+[ ] Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+[ ] Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+[ ] Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+
+</details>
