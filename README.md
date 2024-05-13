@@ -138,9 +138,21 @@ Pada `Navigator.pushReplacement` akan me-replace halaman sekarang dengan halaman
 
 [ ] Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
 
+Container: Ini adalah widget serbaguna yang dapat digunakan untuk menentukan berbagai properti seperti padding, margin, warna latar belakang, dan bentuk. Ini sangat berguna untuk mengelompokkan widget lain dan menambahkan dekorasi ke dalamnya.
+
+Row: Digunakan untuk mengatur widget secara horizontal, satu di sebelah lainnya. Ini berguna ketika ingin menempatkan beberapa widget dalam satu baris.
+
+Column: Mirip dengan Row, tetapi mengatur widget secara vertikal, satu di atas yang lain. Ini cocok digunakan ketika Anda ingin menata widget secara vertikal.
+
+ListView: Digunakan untuk menampilkan daftar widget secara berurutan. Ini adalah pilihan yang baik ketika Anda memiliki sejumlah besar item yang ingin ditampilkan dalam daftar yang dapat digulir.
+
+GridView: Mirip dengan ListView, tetapi mengatur item dalam bentuk grid. Ini cocok untuk menampilkan daftar item dalam format grid.
+
 [ ] Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
 
 [ ] Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+Penerapan Clean Architecture pada aplikasi Flutter dapat membantu mengorganisir kode dengan baik, memisahkan logika bisnis dari detail teknis, dan membuat kode lebih mudah diuji dan dipelihara.
 
 [ ] Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
 
@@ -178,6 +190,10 @@ Ya bisa, hanya saja data yang didapat bisa jadi strukturnya tidak sesuai dengan 
 
 [ ] Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
 
+CookieRequest adalah entitas yang tidak standar dalam konteks Flutter, namun konsep yang sama mungkin mengacu pada penggunaan kuki (cookies) dalam permintaan HTTP. Kuki adalah cara untuk menyimpan data di sisi klien, yang dapat digunakan untuk menyimpan informasi seperti preferensi pengguna, sesi login, dan lain-lain.
+
+Membagikan instance CookieRequest ke semua komponen di aplikasi Flutter memungkinkan pengelolaan kuki yang konsisten, efisien, mudah dipelihara, dan terpusat. Ini penting terutama dalam aplikasi yang menggunakan otentikasi pengguna atau menyimpan informasi penting dalam kuki.
+
 [ ] Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
 
 1. Menambahkan depedensi `http`
@@ -187,6 +203,21 @@ Ya bisa, hanya saja data yang didapat bisa jadi strukturnya tidak sesuai dengan 
 5. Menampilkan data dengan memanfaatkan `FutureBuilder`
 
 [ ] Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+Input Data Akun di Aplikasi Flutter:</br>
+Pengguna memasukkan informasi akun, seperti nama pengguna (username) dan kata sandi (password), melalui antarmuka pengguna di aplikasi Flutter.
+
+Permintaan Autentikasi ke Backend Django:</br>
+Aplikasi Flutter membuat permintaan HTTP (biasanya POST) ke backend Django dengan data akun yang dimasukkan oleh pengguna, seperti nama pengguna dan kata sandi.
+Permintaan ini biasanya dikirim ke endpoint yang ditentukan di Django, yang kemudian akan mengelola proses autentikasi.
+
+Autentikasi oleh Django:</br>
+Backend Django menerima permintaan autentikasi dan memeriksa kecocokan nama pengguna dan kata sandi yang diberikan dengan yang tersimpan di basis data.
+Jika informasi akun yang diberikan valid, Django menghasilkan token autentikasi (biasanya menggunakan JWT atau sesi) yang akan digunakan untuk otorisasi pengguna di masa mendatang.
+
+Respon ke Aplikasi Flutter:</br>
+Backend Django mengirimkan respons ke aplikasi Flutter. Jika autentikasi berhasil, respons biasanya berisi token autentikasi dan kode status HTTP 200 (OK).
+Jika autentikasi gagal, respons biasanya berisi pesan kesalahan yang menjelaskan alasan kegagalan dan kode status HTTP yang sesuai (misalnya, 401 Unauthorized).
 
 [ ] Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
 
