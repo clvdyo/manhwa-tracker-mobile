@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:manhwa_tracker/models/manhwa.dart';
+import 'package:manhwa_tracker/screens/list_manhwa.dart';
 import 'package:manhwa_tracker/screens/menu.dart';
 import 'package:manhwa_tracker/screens/trackerlist_form.dart';
 // TODO: Impor halaman TrackerFormPage jika sudah dibuat
@@ -58,6 +60,17 @@ class LeftDrawer extends StatelessWidget {
                     builder: (context) => const TrackerFormPage()
                   ));
             },
+          ),
+          ListTile(
+              leading: const Icon(Icons.library_books_rounded),
+              title: const Text('Daftar manhwa'),
+              onTap: () {
+                  // Route menu ke halaman manhwa
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ManhwaPage()),
+                  );
+              },
           ),
         ],
       ),
